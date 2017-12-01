@@ -693,6 +693,7 @@ filetype plugin on
 	" can be in any file in the project tree and it will be updated.
 	" Must already have the correctly formatted date so it can be replaced
 	" # 2015-02-12T13:04:42Z
+	autocmd BufWritePost * silent execute "! if [ -f ".getcwd()."/sapps.appcache ]; then sed -i 's/20[0-9][0-9]-[0-1][0-9]-[0-3][0-9]T[0-2][0-9]:[0-5][0-9]:[0-5][0-9]Z/'`date -u +\"\\%Y-\\%m-\\%dT\\%H:\\%M:\\%SZ\"`'/g' ".getcwd()."/sapps.appcache; fi"
 	autocmd BufWritePost * silent execute "! if [ -f ".getcwd()."/version.js ]; then sed -i 's/20[0-9][0-9]-[0-1][0-9]-[0-3][0-9]T[0-2][0-9]:[0-5][0-9]:[0-5][0-9]Z/'`date -u +\"\\%Y-\\%m-\\%dT\\%H:\\%M:\\%SZ\"`'/g' ".getcwd()."/version.js; fi"
 	autocmd BufWritePost * silent execute "! if [ -f ".getcwd()."/sw.js ]; then sed -i 's/20[0-9][0-9]-[0-1][0-9]-[0-3][0-9]T[0-2][0-9]:[0-5][0-9]:[0-5][0-9]Z/'`date -u +\"\\%Y-\\%m-\\%dT\\%H:\\%M:\\%SZ\"`'/g' ".getcwd()."/sw.js; fi"
 

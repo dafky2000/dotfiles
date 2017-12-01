@@ -30,7 +30,7 @@ ln -s $(pwd)/.toprc ~/.toprc
 ln -s $(pwd)/.vimrc ~/.vimrc
 ln -s $(pwd)/.xinitrc ~/.xinitrc
 ln -s $(pwd)/.Xmodmap ~/.Xmodmap
-ln -s $(pwd)/.ycm_extra_conf ~/.ycm_extra_conf
+ln -s $(pwd)/.ycm_extra_conf.py ~/.ycm_extra_conf.py
 ```
 
 ### fish
@@ -55,5 +55,5 @@ ln -s (pwd)/.toprc ~/.toprc
 ln -s (pwd)/.vimrc ~/.vimrc
 ln -s (pwd)/.xinitrc ~/.xinitrc
 ln -s (pwd)/.Xmodmap ~/.Xmodmap
-ln -s (pwd)/.ycm_extra_conf ~/.ycm_extra_conf
+ln -s (pwd)/.ycm_extra_conf.py ~/.ycm_extra_conf.py
 ```
