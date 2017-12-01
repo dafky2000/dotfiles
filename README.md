@@ -8,6 +8,11 @@
 
 Simply make symbolic links from the repository to your home directory for the desired configurations
 
+``` bash
+git clone git@github.com:dafky2000/dotfiles.git
+cd dotfiles
+```
+
 ### bash
 
 ``` bash
