@@ -8,25 +8,52 @@
 
 Simply make symbolic links from the repository to your home directory for the desired configurations
 
+### bash
+
 ``` bash
-ln -s ~/dev/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
-ln -s ~/dev/dotfiles/.config/Code/User/keybindings.json ~/.config/Code/User/keybindings.json
-ln -s ~/dev/dotfiles/.config/Code/User/settings.json ~/.config/Code/User/settings.json
-ln -s ~/dev/dotfiles/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/terminalrc
-ln -s ~/dev/dotfiles/.gnupg/gpg.conf ~/.gnupg/gpg.conf
-ln -s ~/dev/dotfiles/.bashrc ~/.bashrc
-ln -s ~/dev/dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/dev/dotfiles/.conkyrc ~/.conkyrc
-ln -s ~/dev/dotfiles/.gdbinit ~/.gdbinit
-ln -s ~/dev/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dev/dotfiles/.gitignore_global ~/.gitignore_global
-ln -s ~/dev/dotfiles/.htmlhintrc ~/.htmlhintrc
-ln -s ~/dev/dotfiles/.inputrc ~/.inputrc
-ln -s ~/dev/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dev/dotfiles/.tern-project ~/.tern-project
-ln -s ~/dev/dotfiles/.toprc ~/.toprc
-ln -s ~/dev/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dev/dotfiles/.xinitrc ~/.xinitrc
-ln -s ~/dev/dotfiles/.Xmodmap ~/.Xmodmap
-ln -s ~/dev/dotfiles/.ycm_extra_conf ~/.ycm_extra_conf
+ln -s $(pwd)/.config/fish/config.fish ~/.config/fish/config.fish
+ln -s $(pwd)/.config/Code/User/keybindings.json ~/.config/Code/User/keybindings.json
+ln -s $(pwd)/.config/Code/User/settings.json ~/.config/Code/User/settings.json
+ln -s $(pwd)/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/terminalrc
+ln -s $(pwd)/.gnupg/gpg.conf ~/.gnupg/gpg.conf
+ln -s $(pwd)/.bashrc ~/.bashrc
+ln -s $(pwd)/.bash_profile ~/.bash_profile
+ln -s $(pwd)/.conkyrc ~/.conkyrc
+ln -s $(pwd)/.gdbinit ~/.gdbinit
+ln -s $(pwd)/.gitconfig ~/.gitconfig
+ln -s $(pwd)/.gitignore_global ~/.gitignore_global
+ln -s $(pwd)/.htmlhintrc ~/.htmlhintrc
+ln -s $(pwd)/.inputrc ~/.inputrc
+ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/.tern-project ~/.tern-project
+ln -s $(pwd)/.toprc ~/.toprc
+ln -s $(pwd)/.vimrc ~/.vimrc
+ln -s $(pwd)/.xinitrc ~/.xinitrc
+ln -s $(pwd)/.Xmodmap ~/.Xmodmap
+ln -s $(pwd)/.ycm_extra_conf ~/.ycm_extra_conf
+```
+
+### fish
+
+``` fish
+ln -s (pwd)/.config/fish/config.fish ~/.config/fish/config.fish
+ln -s (pwd)/.config/Code/User/keybindings.json ~/.config/Code/User/keybindings.json
+ln -s (pwd)/.config/Code/User/settings.json ~/.config/Code/User/settings.json
+ln -s (pwd)/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/terminalrc
+ln -s (pwd)/.gnupg/gpg.conf ~/.gnupg/gpg.conf
+ln -s (pwd)/.bashrc ~/.bashrc
+ln -s (pwd)/.bash_profile ~/.bash_profile
+ln -s (pwd)/.conkyrc ~/.conkyrc
+ln -s (pwd)/.gdbinit ~/.gdbinit
+ln -s (pwd)/.gitconfig ~/.gitconfig
+ln -s (pwd)/.gitignore_global ~/.gitignore_global
+ln -s (pwd)/.htmlhintrc ~/.htmlhintrc
+ln -s (pwd)/.inputrc ~/.inputrc
+ln -s (pwd)/.tmux.conf ~/.tmux.conf
+ln -s (pwd)/.tern-project ~/.tern-project
+ln -s (pwd)/.toprc ~/.toprc
+ln -s (pwd)/.vimrc ~/.vimrc
+ln -s (pwd)/.xinitrc ~/.xinitrc
+ln -s (pwd)/.Xmodmap ~/.Xmodmap
+ln -s (pwd)/.ycm_extra_conf ~/.ycm_extra_conf
 ```
