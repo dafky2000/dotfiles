@@ -1,0 +1,3 @@
+[submodule ".extra/qt5printers"]
+	path = .extra/qt5printers
+	url = https://github.com/Lekensteyn/qt5printers.git
