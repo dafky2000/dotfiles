@@ -1,0 +1,42 @@
+// Place your settings in this file to overwrite the default settings
+{
+    // Controls the font family.
+    "editor.fontFamily": "'Input Mono'",
+    // Controls the font weight.
+    "editor.fontWeight": "normal",
+    // Controls the font size in pixels.
+    "editor.fontSize": 12,
+    // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+    "editor.tabSize": 2,
+    // Insert spaces when pressing Tab. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+    "editor.insertSpaces": false,
+    // Controls if selections have rounded corners
+    "editor.roundedSelection": false,
+    "files.trimTrailingWhitespace": true,
+    // Controls if the editor will scroll beyond the last line
+    "editor.scrollBeyondLastLine": false,
+    // Controls if lines should wrap. The lines will wrap at min(editor.wrappingColumn, viewportWidthInColumns).
+    "editor.wordWrap": "on",
+    // Controls the indentation of wrapped lines. Can be one of 'none', 'same' or 'indent'.
+    "editor.wrappingIndent": "indent",
+    // Controls whether the editor should render indent guides
+    "editor.renderIndentGuides": true,
+    // Remove trailing auto inserted whitespace
+    "editor.trimAutoWhitespace": true,
+
+    // Confirm before synchronizing git repositories.
+    "git.confirmSync": true,
+
+	// Customizes which terminal to run on Linux.
+	// "terminal.external.linuxExec": "xfce4-terminal",
+    // "terminal.integrated.shell.linux": "/bin/bash",
+
+	// Controls auto completion for C/C++ code. 'Default' uses an experimental recursive directory tag parser (as of right now). 'Disabled' uses the word based completion provided by Visual Studio Code.
+    // Their auto-completion is garbage compared to others
+    // https://github.com/Microsoft/vscode-cpptools/issues/295
+	"C_Cpp.autocomplete": "Disabled",
+	"editor.wordBasedSuggestions": false,
+    "window.zoomLevel": -1,
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true
+}

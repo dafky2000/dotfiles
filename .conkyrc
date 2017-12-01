@@ -1,0 +1,87 @@
+conky.config = {
+	xinerama_head = 3,
+	alignment = 'bottom_left',
+	background = false,
+	border_width = 1,
+	cpu_avg_samples = 2,
+	default_color = 'white',
+	default_outline_color = 'white',
+	default_shade_color = 'white',
+	double_buffer = true,
+	draw_borders = false,
+	draw_graph_borders = true,
+	draw_outline = false,
+	draw_shades = false,
+	font = 'Input Mono:style=Regular:size=8',
+	--font = 'DejaVu Sans Mono:size=9',
+	use_xft = true,
+	override_utf8_locale = true,
+	gap_x = 5,
+	gap_y = 65,
+	minimum_height = 5,
+	minimum_width = 180,
+	maximum_width = 180,
+	net_avg_samples = 2,
+	no_buffers = true,
+	out_to_console = false,
+	out_to_stderr = false,
+	extra_newline = false,
+
+	own_window = true,
+	own_window_transparent = false,
+	own_window_argb_visual = true,
+	own_window_argb_value = 100,
+	own_window_class = 'Conky',
+	own_window_type = 'normal',
+	own_window_hints = 'undecorated,above,skip_taskbar,skip_pager,sticky',
+
+	stippled_borders = 0,
+	short_units=true,
+	update_interval = 1.0,
+	uppercase = false,
+	use_spacer = 'none',
+	show_graph_scale = false,
+	show_graph_range = false,
+
+	-- Unicode template, character, size: Example ${template0 ♫ 12}
+	-- http://users.teilar.gr/~g1951d/Symbola.zip
+	template0 = [[${font Symbola:style=Regular:size=\2}\1${font}]]
+};
+
+--There is a space at the end of each line so it appears centered under the headers.
+conky.text = [[
+
+ $color${template0 🖳 14} $alignr$kernel
+ ${color grey}Uptime:$color$alignr$uptime 
+ ${color grey}RAM Available:$color$alignr${memeasyfree} 
+ ${color grey}CPU Usage:$color$alignr$cpu% 
+ ${color grey}Processes:$color$alignr$running_processes${color grey}/$color$processes 
+
+ $color${template0 🖫 14} ${color grey}IO:$color$alignr$diskio_read/$diskio_write 
+ ${color grey}Space /home:$color$alignr${fs_used /home/}/${fs_size /home/} 
+ ${color grey}${fs_bar 3,163 /home/}
+
+ $color${template0 🖧 16} ${color grey}IO:$color$alignr${downspeed enp5s0}/${upspeed enp5s0} 
+ ${color grey}Public:$color$alignr${texeci 60 curl -s http://www.icanhazip.com} 
+ ${color grey}GeoIP:$color$alignr${texecpi 60 /bin/bash ~/scripts/misc/geoip/collect_and_find.sh} 
+ ${color grey}VPN:$color$alignr${addr tun0} 
+ ${color grey}Local:$color$alignr${addr enp5s0} 
+# ${color grey}Public:$color$alignr${curl http://www.icanhazip.com 1.00} 
+# Using texeci because using the curl command above automatically adds a newline
+#	${color grey}Public:$color$alignr${texeci 60 wget http://ipinfo.io/ip -qO -} 
+#
+#
+#
+#
+
+# CYKF == Region of Waterloo International Airport (Kitchener/Waterloo Regional Airport) - Regional Municipality of Waterloo, Ontario
+ $color${template0 🌦 14} $alignr${weather http://tgftp.nws.noaa.gov/data/observations/metar/stations/ CYKF weather 5} ${weather http://tgftp.nws.noaa.gov/data/observations/metar/stations/ CYKF temperature 5}°c ${weather http://tgftp.nws.noaa.gov/data/observations/metar/stations/ CYKF humidity 5}${template0 ⍴ 8} 
+ $color$alignr${weather http://tgftp.nws.noaa.gov/data/observations/metar/stations/ CYKF wind_speed 5}km/h ${weather http://tgftp.nws.noaa.gov/data/observations/metar/stations/ CYKF wind_dir 5} 
+${font Input Mono:style=Regular:size=6}$color$alignc${weather http://tgftp.nws.noaa.gov/data/observations/metar/stations/ CYKF last_update 5} 
+
+ $color${template0 ♪ 12} $alignr$cmus_artist 
+ $color$alignr$cmus_album 
+ $color$alignr$cmus_title 
+ $color${cmus_progress 5,163}
+#$color$alignr$cmus_date 
+]]

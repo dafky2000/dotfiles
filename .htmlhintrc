@@ -1,0 +1,18 @@
+{
+  "tagname-lowercase": true,
+  "attr-lowercase": ["viewBox"],
+  "attr-value-double-quotes": true,
+  /* doctype removed because of web components.. be smart enought to add it!! */
+  "doctype-first": false, 
+  "tag-pair": true,
+  "spec-char-escape": true,
+  "id-unique": true,
+  "src-not-empty": true,
+  "attr-no-duplication": true,
+  "title-require": true,
+  /* "jshint": {}, */
+  "csslint": {
+    "display-property-grouping": true,
+    "known-properties": false
+  }
+}

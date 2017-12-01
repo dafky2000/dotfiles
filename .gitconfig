@@ -1,0 +1,35 @@
+[user]
+	email = myself@danielkelly.me
+	name = Dan Kelly
+	signingkey = 3E4C99EB159E4844
+[push]
+	default = upstream
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	undo-commit = reset --soft HEAD^
+	fire = fire
+	quick-stats = ! /usr/local/bin/git-quick-stats
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[color "diff"]
+	old = red
+	new = green
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+[commit]
+	gpgsign = true
+[push]
+	gpgsign = "if-asked"
+[tag]
+	forceSignAnnotated = true

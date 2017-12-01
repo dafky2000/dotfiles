@@ -1,0 +1,13 @@
+.perl_project_existing_sources.ini
+private/
+nbproject/
+__pycache__/
+*~
+.*.swp
+tags
+DEADJOE
+.project
+.vdd.done
+.ycm_extra_conf.py
+completer.hist
+_vimrc_local.vim
