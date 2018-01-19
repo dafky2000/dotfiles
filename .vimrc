@@ -8,7 +8,7 @@ filetype off
 
 augroup filetypedetect
   au BufNewFile,BufRead,BufReadPost *.md set filetype=markdown
-  au BufNewFile,BufRead,BufReadPost *.html set filetype=php
+  " au BufNewFile,BufRead,BufReadPost *.html set filetype=php
 augroup END
 
 " PLUGINS:
@@ -65,6 +65,7 @@ augroup END
   Plugin 'chriskempson/base16-vim'
   Plugin 'LucHermitte/lh-vim-lib'
   Plugin 'LucHermitte/local_vimrc'
+  Plugin 'tomlion/vim-solidity'
 	" All of your Plugins must be added before the following line
 	call vundle#end()            " required
 
@@ -542,7 +543,7 @@ filetype plugin on
     \ 'append_file': 0,
 	\ }
 	let g:neomake_polymerhtml_polylint_maker = {
-		\ 'exe': '/usr/bin/polylint',
+		\ 'exe': '/usr/bin/polymer lint',
 		\ 'args': ['--verbose', '--no-recursion'],
 		\ 'errorformat': '%A%f:%l:%c,\ \ \ \ %m',
 	\ }
@@ -551,9 +552,9 @@ filetype plugin on
 		\ 'args': ['--verbose', '--extract', 'always'],
 		\ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
 	\ }
-	let g:neomake_polymerhtml_csslint_maker = {
-		\ 'exe': '/usr/bin/csslint',
-	\ }
+	" let g:neomake_polymerhtml_csslint_maker = {
+	" 	\ 'exe': '/usr/bin/csslint',
+	" \ }
 	" \ 'args': ['--verbose', '--extract', 'always'],
 	" \ 'errorformat': '%f:%l:%c: %m',
 	let g:neomake_html_tidy_maker = {
@@ -595,7 +596,8 @@ filetype plugin on
 	let g:neomake_php_enabled_makers = ['php', 'htmlhint']
 	" let g:neomake_html_enabled_makers = ['php', 'htmlhint', 'jshint']
 	let g:neomake_html_enabled_makers = ['htmlhint', 'eslint']
-	let g:neomake_polymerhtml_enabled_makers = ['csslint', 'jshint', 'polylint']
+	" let g:neomake_polymerhtml_enabled_makers = ['csslint', 'jshint', 'polylint']
+	let g:neomake_polymerhtml_enabled_makers = ['eslint', 'polylint']
 	" let g:neomake_javascript_enabled_makers = ['jshint']
 	let g:neomake_javascript_enabled_makers = ['eslint']
 	let g:neomake_css_enabled_makers = ['csslint']

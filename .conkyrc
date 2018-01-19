@@ -62,17 +62,18 @@ conky.text = [[
  ${color grey}${fs_bar 3,163 /home/}
 
  $color${template0 🖧 16} ${color grey}IO:$color$alignr${downspeed enp5s0}/${upspeed enp5s0} 
- ${color grey}Public:$color$alignr${texeci 60 curl -s http://www.icanhazip.com} 
- ${color grey}GeoIP:$color$alignr${texecpi 60 /bin/bash ~/scripts/misc/geoip/collect_and_find.sh} 
- ${color grey}VPN:$color$alignr${addr tun0} 
+# ${color grey}GeoIP:$color$alignr${texecpi 60 /bin/bash ~/scripts/misc/geoip/collect_and_find.sh} 
  ${color grey}Local:$color$alignr${addr enp5s0} 
-# ${color grey}Public:$color$alignr${curl http://www.icanhazip.com 1.00} 
-# Using texeci because using the curl command above automatically adds a newline
-#	${color grey}Public:$color$alignr${texeci 60 wget http://ipinfo.io/ip -qO -} 
-#
-#
-#
-#
+ ${color grey}VPN:$color$alignr${addr tun0} 
+ ${color grey}Public:$color$alignr${texeci 60 curl -s http://www.icanhazip.com/s} 
+
+ $color${template0 B 12} ${alignr}${texeci 60 curl https://api.coinmarketcap.com/v1/ticker/bitcoin/ | grep "price_usd" | grep -oE "[0-9]*\.[0-9]+" | xargs -0 printf "$%'.2f"}  USD/BTC
+${alignr}${texeci 60 curl https://api.coinmarketcap.com/v1/ticker/litecoin/ | grep "price_btc" | grep -oE "[0-9]*\.[0-9]+"}  BTC/LTC
+${alignr}${texeci 60 curl https://api.coinmarketcap.com/v1/ticker/ethereum/ | grep "price_btc" | grep -oE "[0-9]*\.[0-9]+"}  BTC/ETH
+${alignr}${texeci 60 curl https://api.coinmarketcap.com/v1/ticker/ripple/ | grep "price_btc" | grep -oE "[0-9]*\.[0-9]+"}  BTC/XRP
+${alignr}${texeci 60 curl https://api.coinmarketcap.com/v1/ticker/decentraland/ | grep "price_btc" | grep -oE "[0-9]*\.[0-9]+"} BTC/MANA
+${alignr}${texeci 60 curl https://api.coinmarketcap.com/v1/ticker/viberate/ | grep "price_btc" | grep -oE "[0-9]*\.[0-9]+"}  BTC/VIB
+${alignr}${texeci 60 curl https://api.coinmarketcap.com/v1/ticker/power-ledger/ | grep "price_btc" | grep -oE "[0-9]*\.[0-9]+"} BTC/POWR
 
 # CYKF == Region of Waterloo International Airport (Kitchener/Waterloo Regional Airport) - Regional Municipality of Waterloo, Ontario
  $color${template0 🌦 14} $alignr${weather http://tgftp.nws.noaa.gov/data/observations/metar/stations/ CYKF weather 5} ${weather http://tgftp.nws.noaa.gov/data/observations/metar/stations/ CYKF temperature 5}°c ${weather http://tgftp.nws.noaa.gov/data/observations/metar/stations/ CYKF humidity 5}${template0 ⍴ 8} 
